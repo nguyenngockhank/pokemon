@@ -3,7 +3,6 @@ import { VueModule } from 'vue-modules'
 import VueRouter from 'vue-router'
 import { homeRoutes } from './router'
 import { Store } from 'vuex'
-import { homeStore } from './store'
 
 export class HomeModule implements VueModule {
   readonly name = 'home'
@@ -11,6 +10,5 @@ export class HomeModule implements VueModule {
 
   install(Vue: typeof _Vue) {
     this.router.addRoutes(homeRoutes)
-    this.store.registerModule([this.name], homeStore)
   }
 }
